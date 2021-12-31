@@ -9,3 +9,33 @@ body{
     display: flex;
     background: brown;
 }
+
+.memory-game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: trasnform .2s;
+}
+
+.memory-card.flip {
+    transform: scaleY(180deg);
+}
+
